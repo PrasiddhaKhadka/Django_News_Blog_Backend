@@ -18,10 +18,17 @@ from django.contrib import admin
 from django.urls import path
 from django.conf.urls.static import static
 from django.conf import settings
+from django.urls import include
 
+
+admin.site.site_header = "News Blog Admin"
+admin.site.site_title = "News Blog Admin Portal"
+admin.site.index_title = "Welcome to News Blog Admin Portal"
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('news/', include('news.urls')),
+    path('__debug__/', include('debug_toolbar.urls')), 
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
