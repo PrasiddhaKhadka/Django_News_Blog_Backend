@@ -4,14 +4,6 @@ from django.http import HttpRequest
 from .  import models
 from django.db.models import Count
 
-# Register your models here.
-# class NewsAdmin(admin.ModelAdmin):
-#     list_display = ['title', 'collection']
-#     list_filter = ['collection']
-#     search_fields = ['title', 'collection__name']
-        
-    
-# admin.site.register(models.News)
 
 @admin.register(models.News)
 class NewsAdmin(admin.ModelAdmin):

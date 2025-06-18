@@ -6,7 +6,3 @@ class NewsSerializer(serializers.ModelSerializer):
         model= News
         fields=['title','content','image','collection','created_at']
 
-    
-    # def isNew(self,news:News):
-    #     if news.created_at
-
